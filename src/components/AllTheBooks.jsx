@@ -5,7 +5,11 @@ import fantasy from '../data/fantasy.json'
 import Book from './Book';
 import { Component } from "react";
 
+
 class AllTheBooks extends Component {
+
+    
+   
 
    render(){
     
@@ -14,7 +18,7 @@ class AllTheBooks extends Component {
             <Row className='row-cols-2 row-cols-md-3 row-cols-md-4 gy-3'>
                 {fantasy.map((book, index) => (
                     <Col key={`book-${index}`}>
-                        <Book src={book.img} title={book.title}  />
+                        <Book src={book.img} title={book.title} asin={book.asin} />
                     </Col>
                  
                 ))}

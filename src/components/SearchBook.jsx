@@ -33,7 +33,7 @@ render(){
                     {
                     this.props.books.filter((book) => book.title.toLowerCase().includes(this.state.searchValue)).map((book, index) => (
                         <Col key={`book-${index}`}>
-                            <Book src={book.img} title={book.title}  />
+                            <Book src={book.img} title={book.title} asin={book.asin} />
                         </Col>
                      
                     ))
